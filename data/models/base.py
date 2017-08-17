@@ -92,7 +92,6 @@ class MongoDoc(Document):
             multi=multi
         )
 
-        print "res>>>>>>>>: {}".format(res)
         if update_self:
             d = self.cllection.find_one(spec)
             for k, v in d.iteritems():
