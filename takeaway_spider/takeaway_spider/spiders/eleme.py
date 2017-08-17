@@ -4,8 +4,12 @@ import scrapy
 
 class ElemeSpider(scrapy.Spider):
     name = 'eleme'
-    allowed_domains = ['ele.me']
-    start_urls = ['http://ele.me/']
+
+    def start_request(self):
+        allowed_domains = ['ele.me']
+        start_urls = ['https://www.ele.me/home/']
 
     def parse(self, response):
-        pass
+        if response.status == 200:
+            # 当返回
+            pass
